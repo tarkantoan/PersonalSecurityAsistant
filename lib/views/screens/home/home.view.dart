@@ -6,6 +6,9 @@ import 'package:personal_security_asistant/views/screens/apps/carcrash/carcrash.
 import 'package:personal_security_asistant/views/screens/apps/carcrash/carcrash.view.dart';
 import 'package:personal_security_asistant/views/screens/apps/earthquake/earthquake.dart';
 import 'package:personal_security_asistant/views/screens/home/home.controller.dart';
+import 'package:personal_security_asistant/views/screens/home/widgets/appbar/home.appbar.view.dart';
+import 'package:personal_security_asistant/views/screens/home/widgets/bottom_nav/bottom.nav.dart';
+import 'package:personal_security_asistant/views/screens/home/widgets/home_main_widget.dart';
 
 class HomeScreen extends SFW {
   HomeScreen({Key? key, required controller})
@@ -20,8 +23,7 @@ class HomeScreen extends SFW {
 
   @override
   Widget build() {
-    CarCrashController carCrashController = CarCrashController();
-    return CarCrashScreen(controller: carCrashController);
+    return HomeViewScreen();
   }
 
   @override
@@ -29,4 +31,26 @@ class HomeScreen extends SFW {
 
   @override
   isBuilded() {}
+}
+
+class HomeViewScreen extends StatefulWidget {
+  const HomeViewScreen({Key? key}) : super(key: key);
+
+  @override
+  _HomeViewScreenState createState() => _HomeViewScreenState();
+}
+
+class _HomeViewScreenState extends State<HomeViewScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        appBar: HomeAppBar(
+          controller: HomeController(),
+        ),
+        body: HomeApps(),
+        bottomNavigationBar: HomeViewButtonNavBar(),
+      ),
+    );
+  }
 }

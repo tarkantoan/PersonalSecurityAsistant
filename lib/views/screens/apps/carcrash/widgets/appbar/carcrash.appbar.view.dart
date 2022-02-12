@@ -15,7 +15,7 @@ class CarCrashAppBar extends SFW with PreferredSizeWidget {
   @override
   Widget build() {
     return AppBar(
-      title: Text("Araba Kazası Asistanı"),
+      title: Text("Personal Securaty Assistans"),
     );
   }
 

@@ -14,7 +14,10 @@ class HomeAppBar extends SFW with PreferredSizeWidget {
   @override
   Widget build() {
     return AppBar(
-      title: Text("Deprem Asistanı"),
+      title: const Text(
+        "Personal Security Assistant",
+      ),
+      centerTitle: true,
     );
   }
 
