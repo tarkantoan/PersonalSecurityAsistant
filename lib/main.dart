@@ -16,5 +16,27 @@ Future<void> main() async {
   }
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   final app = App();
-  runApp(MaterialApp(home: app.widget));
+  runApp(MaterialApp(
+    theme: customThemeData,
+    home: app.widget,
+  ));
 }
+
+ThemeData customThemeData = ThemeData(
+  brightness: Brightness.dark,
+  primarySwatch: const MaterialColor(
+    0xff4438ca,
+    <int, Color>{
+      50: Color(0xffece7f9), //10%
+      100: Color(0xffcec5f0), //20%
+      200: Color(0xffad9ee7), //30%
+      300: Color(0xff8b76df), //40%
+      400: Color(0xff6f59d8), //50%
+      500: Color(0xff503dd0), //60%
+      600: Color(0xff4438ca), //70%
+      700: Color(0xff3130c1), //80%
+      800: Color(0xff172bba), //90%
+      900: Color(0xff001fae), //100%
+    },
+  ),
+);
