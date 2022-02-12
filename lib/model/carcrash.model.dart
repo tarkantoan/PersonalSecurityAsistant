@@ -9,30 +9,8 @@ enum CarCrashSender { User, Admin, Api }
 enum CarCrashLevel { Light, Heavy, Critical }
 
 class CarCrashModel implements Model {
-  static String demoData = """
-  "crashes":{
-    {
-      "id": 3,
-      "latLng": [0.0,0.0]
-    },
-    {
-      "id": 4,
-      "latLng": [0.0,0.0]
-    },
-    {
-      "id": 5,
-      "latLng": [0.0,0.0]
-    },
-    {
-      "id": 6,
-      "latLng": [0.0,0.0]
-    },
-    {
-      "id": 7,
-      "latLng": [0.0,0.0]
-    }
-  }
-""";
+  static String demoData =
+      '{"crashes": [{"id":"3","latLng": [41.335175, 36.255038]},{"id": "4","latLng": [41.336484, 36.259325]},{"id": "5","latLng": [41.334405, 36.257615]}]}';
 
   String id;
   LatLng latLng = const LatLng(0, 0);

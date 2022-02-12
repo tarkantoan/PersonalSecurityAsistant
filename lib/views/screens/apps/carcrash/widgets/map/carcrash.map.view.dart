@@ -18,22 +18,29 @@ class CarCrashMap extends SFW {
   CarCrashMapController get getController =>
       controller as CarCrashMapController;
 
-  Map<CircleId, Circle> circles = {
-    CircleId("ss"): Circle(
-      circleId: CircleId(
-        "ss",
-      ),
-      fillColor: Colors.red.withOpacity(0.5),
-      center: LatLng(41.335900, 36.253450),
-      radius: 15,
-      strokeWidth: 0,
-      zIndex: 100,
-    ),
-  };
+  Map<CircleId, Circle> circles = {};
 
   @override
   initState() {
-    print(CarCrashModel.demoData);
+    List<dynamic> list =
+        (json.decode(CarCrashModel.demoData)['crashes']) as List<dynamic>;
+    list.forEach((element) {
+      final crash = (element as Map<String, dynamic>);
+      final ll =
+          LatLng((crash["latLng"] as List)[0], (crash["latLng"] as List)[1]);
+      circles.addAll({
+        CircleId(crash["id"]): Circle(
+          circleId: CircleId(
+            crash["id"],
+          ),
+          fillColor: Colors.red.withOpacity(0.5),
+          center: ll,
+          radius: 25,
+          strokeWidth: 0,
+          zIndex: 100,
+        ),
+      });
+    });
   }
 
   @override
