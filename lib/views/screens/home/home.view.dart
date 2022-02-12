@@ -1,10 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:personal_security_asistant/core/sfw.class.dart';
-import 'package:personal_security_asistant/utilities/general.dart';
-import 'package:personal_security_asistant/views/screens/apps/carcrash/carcrash.dart';
+import 'package:personal_security_asistant/views/screens/apps/carcrash/carcrash.controller.dart';
+import 'package:personal_security_asistant/views/screens/apps/carcrash/carcrash.view.dart';
 import 'package:personal_security_asistant/views/screens/apps/earthquake/earthquake.dart';
 import 'package:personal_security_asistant/views/screens/home/home.controller.dart';
 
@@ -18,11 +17,11 @@ class HomeScreen extends SFW {
   Function get isBuildedCallbackFunction => () {};
 
   Earthquake earthquake = Earthquake();
-  CarCrash carCrash = CarCrash();
 
   @override
   Widget build() {
-    return carCrash.widget;
+    CarCrashController carCrashController = CarCrashController();
+    return CarCrashScreen(controller: carCrashController);
   }
 
   @override

@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\lib",
+    "\\lib\\config",
+    "\\lib\\views",
+    "\\lib\\views\\screens",
+    "\\lib\\views\\screens\\auth",
+    "\\lib\\views\\screens\\home"
+  ],
+  "SelectedNode": "\\lib\\main.dart",
+  "PreviewInSolutionExplorer": false
+}

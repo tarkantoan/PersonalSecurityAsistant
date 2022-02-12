@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:personal_security_asistant/core/sfw.class.dart';
 import 'package:personal_security_asistant/views/screens/apps/carcrash/carcrash.controller.dart';
+import 'package:personal_security_asistant/views/screens/apps/carcrash/widgets/map/carcrash.map.controller.dart';
 
-class CarCrashAppBar extends SFW with PreferredSizeWidget {
-  CarCrashAppBar({Key? key, required controller, required this.module})
+class CarCrashSettings extends SFW {
+  CarCrashSettings({Key? key, required controller})
       : super(key: key, controller: controller);
-  CarCrashController module;
 
   CarCrashController get getController => controller as CarCrashController;
 
@@ -14,14 +15,9 @@ class CarCrashAppBar extends SFW with PreferredSizeWidget {
 
   @override
   Widget build() {
-    return AppBar(
-      title: Text("Araba Kazası Asistanı"),
-    );
+    return Text("Ayarlar");
   }
 
   @override
   isBuilded() {}
-
-  @override
-  Size get preferredSize => Size.fromHeight(60);
 }
