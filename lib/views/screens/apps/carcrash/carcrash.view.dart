@@ -7,6 +7,7 @@ import 'package:personal_security_asistant/views/screens/apps/carcrash/widgets/a
 import 'package:personal_security_asistant/views/screens/apps/carcrash/widgets/bottom_nav/carcrash.bottomnav.view.dart';
 import 'package:personal_security_asistant/views/screens/apps/carcrash/widgets/map/carcrash.map.controller.dart';
 import 'package:personal_security_asistant/views/screens/apps/carcrash/widgets/map/carcrash.map.view.dart';
+import 'package:personal_security_asistant/views/screens/apps/carcrash/widgets/settings/carcrash.settings.view.dart';
 
 class CarCrashScreen extends SFW {
   CarCrashScreen({Key? key, required controller})
@@ -16,7 +17,7 @@ class CarCrashScreen extends SFW {
   CarCrashMapController carCrashMapController = CarCrashMapController();
   @override
   initState() {}
-  int selectedIndex = 0;
+  int selectedIndex = 1;
 
   @override
   Widget build() {
@@ -36,7 +37,7 @@ class CarCrashScreen extends SFW {
   Widget selectPages(int index) {
     switch (index) {
       case 1:
-        return Text("data");
+        return CarCrashSettings(controller: SFWController());
       default:
         return CarCrashMap(
           controller: carCrashMapController,

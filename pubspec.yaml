@@ -41,6 +41,11 @@ dependencies:
   intl_phone_field: ^3.0.1
   google_maps_flutter: ^2.1.1
   geolocator: ^8.1.1
+  workmanager: ^0.4.1
+  background_location: ^0.8.1
+  carp_background_location: ^3.0.1
+  location: ^4.3.0
+  flutter_ringtone_player: ^3.1.1
 
 dev_dependencies:
   flutter_test:
