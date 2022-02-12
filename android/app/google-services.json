@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "134642928173",
+    "project_id": "personalsecurityasistant-fec89",
+    "storage_bucket": "personalsecurityasistant-fec89.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134642928173:android:9e35a252826f0266bbc6a4",
+        "android_client_info": {
+          "package_name": "com.example.personal_security_asistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134642928173-7c1es70pd72hepob9p5so70ecs6nsmkt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjRFJMhrseOsawHw3u6yRcSEUJPNifh3k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134642928173-7c1es70pd72hepob9p5so70ecs6nsmkt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
