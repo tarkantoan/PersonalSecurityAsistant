@@ -51,37 +51,7 @@ class AuthController extends SFWController {
       loginFail();
       return;
     }
-
-    showModalBottomSheet(
-        context: getView.state.context,
-        builder: (context) {
-          return Container(
-            padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                TextFormField(
-                  keyboardType: TextInputType.phone,
-                  maxLength: 6,
-                  decoration: InputDecoration(
-                    label: Text("Doğrulama Kodu"),
-                  ),
-                  controller: formController["code"],
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    user.confirmPhoneCode(formController["code"]!.text).then(
-                        (value) => value != null ? loginSuccess(value) : "");
-                  },
-                  child: Text("Doğrula"),
-                  style: ElevatedButton.styleFrom(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 30, vertical: 18)),
-                ),
-              ],
-            ),
-          );
-        });
+    getView.openVerificationSMS();
   }
 
   AuthScreen get getView => view as AuthScreen;
