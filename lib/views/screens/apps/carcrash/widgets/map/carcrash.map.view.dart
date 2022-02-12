@@ -1,8 +1,11 @@
+import 'dart:convert';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:personal_security_asistant/core/sfw.class.dart';
+import 'package:personal_security_asistant/model/carcrash.model.dart';
 import 'package:personal_security_asistant/views/screens/apps/carcrash/carcrash.controller.dart';
 import 'package:personal_security_asistant/views/screens/apps/carcrash/widgets/map/carcrash.map.controller.dart';
 
@@ -14,6 +17,7 @@ class CarCrashMap extends SFW {
 
   CarCrashMapController get getController =>
       controller as CarCrashMapController;
+
   Map<CircleId, Circle> circles = {
     CircleId("ss"): Circle(
       circleId: CircleId(
@@ -28,7 +32,9 @@ class CarCrashMap extends SFW {
   };
 
   @override
-  initState() {}
+  initState() {
+    print(CarCrashModel.demoData);
+  }
 
   @override
   Widget build() {
@@ -50,7 +56,6 @@ class CarCrashMap extends SFW {
             getController.isCameraLock
                 ? Icons.my_location_rounded
                 : Icons.location_disabled,
-            color: Colors.white,
           ),
           onPressed: () {
             getController.isCameraLock = !getController.isCameraLock;
