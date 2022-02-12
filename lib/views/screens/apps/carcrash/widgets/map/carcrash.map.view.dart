@@ -51,16 +51,21 @@ class CarCrashMap extends SFW {
           },
           circles: Set<Circle>.of(circles.values),
         ),
-        FloatingActionButton(
-          child: Icon(
-            getController.isCameraLock
-                ? Icons.my_location_rounded
-                : Icons.location_disabled,
+        Positioned(
+          right: 8,
+          bottom: 100,
+          child: FloatingActionButton(
+            mini: true,
+            child: Icon(
+              getController.isCameraLock
+                  ? Icons.my_location_rounded
+                  : Icons.location_disabled,
+            ),
+            onPressed: () {
+              getController.isCameraLock = !getController.isCameraLock;
+            },
           ),
-          onPressed: () {
-            getController.isCameraLock = !getController.isCameraLock;
-          },
-        ),
+        )
       ],
     );
   }
