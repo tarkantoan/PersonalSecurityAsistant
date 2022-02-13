@@ -50,6 +50,7 @@ class CarCrashMap extends SFW {
     return Stack(
       children: [
         GoogleMap(
+          zoomControlsEnabled: false,
           trafficEnabled: false,
           myLocationEnabled: true,
           myLocationButtonEnabled: false,
@@ -61,10 +62,9 @@ class CarCrashMap extends SFW {
           circles: Set<Circle>.of(circles.values),
         ),
         Positioned(
-          right: 8,
-          bottom: 100,
+          right: 10,
+          bottom: 90,
           child: FloatingActionButton(
-            mini: true,
             child: Icon(
               getController.isCameraLock
                   ? Icons.my_location_rounded

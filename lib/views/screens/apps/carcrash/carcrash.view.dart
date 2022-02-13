@@ -8,6 +8,7 @@ import 'package:personal_security_asistant/views/screens/apps/carcrash/widgets/b
 import 'package:personal_security_asistant/views/screens/apps/carcrash/widgets/map/carcrash.map.controller.dart';
 import 'package:personal_security_asistant/views/screens/apps/carcrash/widgets/map/carcrash.map.view.dart';
 import 'package:personal_security_asistant/views/screens/apps/carcrash/widgets/settings/carcrash.settings.view.dart';
+import 'package:personal_security_asistant/views/screens/scaffold_bulk_item/scaffold.bulk.item.dart';
 
 class CarCrashScreen extends SFW {
   CarCrashScreen({Key? key, required controller})
@@ -31,6 +32,7 @@ class CarCrashScreen extends SFW {
         controller: SFWController(),
         module: getController,
       ),
+      floatingActionButton: speedDial,
     );
   }
 
