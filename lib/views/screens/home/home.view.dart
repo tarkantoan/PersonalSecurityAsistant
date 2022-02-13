@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:personal_security_asistant/core/sfw.class.dart';
 import 'package:personal_security_asistant/views/screens/apps/carcrash/carcrash.controller.dart';
 import 'package:personal_security_asistant/views/screens/apps/carcrash/carcrash.view.dart';
@@ -9,6 +10,7 @@ import 'package:personal_security_asistant/views/screens/home/home.controller.da
 import 'package:personal_security_asistant/views/screens/home/widgets/appbar/home.appbar.view.dart';
 import 'package:personal_security_asistant/views/screens/home/widgets/bottom_nav/bottom.nav.dart';
 import 'package:personal_security_asistant/views/screens/home/widgets/home_main_widget.dart';
+import 'package:personal_security_asistant/views/screens/scaffold_bulk_item/scaffold.bulk.item.dart';
 
 class HomeScreen extends SFW {
   HomeScreen({Key? key, required controller})
@@ -50,6 +52,7 @@ class _HomeViewScreenState extends State<HomeViewScreen> {
         ),
         body: HomeApps(),
         bottomNavigationBar: HomeViewButtonNavBar(),
+        floatingActionButton: speedDial,
       ),
     );
   }
