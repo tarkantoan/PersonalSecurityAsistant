@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:personal_security_asistant/core/sfw.class.dart';
 import 'package:personal_security_asistant/core/swf.controller.class.dart';
 import 'package:personal_security_asistant/views/screens/apps/carcrash/carcrash.controller.dart';
@@ -10,14 +9,15 @@ import 'package:personal_security_asistant/views/screens/apps/carcrash/widgets/m
 import 'package:personal_security_asistant/views/screens/apps/carcrash/widgets/settings/carcrash.settings.view.dart';
 
 class CarCrashScreen extends SFW {
-  CarCrashScreen({Key? key, required controller})
+  CarCrashScreen({Key? key, required CarCrashController controller})
       : super(key: key, controller: controller);
 
-  CarCrashController get getController => controller as CarCrashController;
+  CarCrashController get getController => controller;
   CarCrashMapController carCrashMapController = CarCrashMapController();
+
   @override
   initState() {}
-  int selectedIndex = 1;
+  int selectedIndex = 0;
 
   @override
   Widget build() {
