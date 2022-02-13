@@ -14,15 +14,26 @@ class CarCrashBottomNav extends SFW with PreferredSizeWidget {
   @override
   Widget build() {
     return BottomNavigationBar(
+        backgroundColor: Colors.black54,
         currentIndex: module.getView.selectedIndex,
         onTap: getController.onTapBottomNav,
         items: [
           BottomNavigationBarItem(
+            activeIcon: Icon(
+              Icons.map_outlined,
+              color: Color(0xff4338CA),
+            ),
             icon: Icon(Icons.map_outlined),
             label: "Harita",
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.settings_outlined), label: "Ayarlar"),
+            activeIcon: Icon(
+              Icons.settings_outlined,
+              color: Color(0xff4338CA),
+            ),
+            icon: Icon(Icons.settings_outlined),
+            label: "Ayarlar",
+          ),
         ]);
   }
 

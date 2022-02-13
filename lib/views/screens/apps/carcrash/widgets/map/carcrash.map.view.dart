@@ -59,7 +59,7 @@ class CarCrashMap extends SFW {
           circles: Set<Circle>.of(circles.values),
         ),
         Positioned(
-          right: 10,
+          right: 15,
           bottom: 90,
           child: FloatingActionButton(
             child: Icon(
