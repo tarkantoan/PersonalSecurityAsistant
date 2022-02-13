@@ -39,7 +39,8 @@ class CarCrashScreen extends SFW {
   Widget selectPages(int index) {
     switch (index) {
       case 1:
-        return CarCrashSettings(controller: SFWController());
+        return CarCrashSettings(
+            controller: getController.carCrashSettingsController);
       default:
         return CarCrashMap(
           controller: carCrashMapController,
