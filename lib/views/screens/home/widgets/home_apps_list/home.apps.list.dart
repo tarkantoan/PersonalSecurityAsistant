@@ -22,8 +22,8 @@ class AppsGridState extends State<AppsGrid> {
               HomeAppsCard(
                 imageUrl:
                     "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/finance_app_2%2Fillustrations%2Fillustration1.png?alt=media&token=901c672d-0f35-49ee-8543-1e27a0891a1c",
-                text: 'Araba Kaza Noktaları',
-                subtitle: 'Daha önce yapılan kaza noktaları ',
+                text: 'Yol Asistanı',
+                subtitle: 'Sürüşünüzü daha güvenli hale getirin',
                 onPressed: () {
                   CarCrashController carCrashController = CarCrashController();
                   Navigator.of(context).push(
@@ -42,8 +42,8 @@ class AppsGridState extends State<AppsGrid> {
               HomeAppsCard(
                 imageUrl:
                     "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/finance_app_2%2Fillustrations%2Fillustration1.png?alt=media&token=901c672d-0f35-49ee-8543-1e27a0891a1c",
-                text: 'Test',
-                subtitle: 'Test',
+                text: 'Deprem Asistanı',
+                subtitle: 'Bölgenizdeki depremlerdeki güvenliğinizi arttırın.',
                 onPressed: () {},
               ),
             ],
@@ -54,8 +54,9 @@ class AppsGridState extends State<AppsGrid> {
               HomeAppsCard(
                 imageUrl:
                     "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/finance_app_2%2Fillustrations%2Fillustration1.png?alt=media&token=901c672d-0f35-49ee-8543-1e27a0891a1c",
-                text: 'Test',
-                subtitle: 'Test',
+                text: 'Acil Servis Asistanı',
+                subtitle:
+                    'Güvenlik ve sağlık hizmetlerinden kolay şekilde yararlanın',
                 onPressed: () {
                   CarCrashController carCrashController = CarCrashController();
                   Navigator.of(context).push(
@@ -67,16 +68,6 @@ class AppsGridState extends State<AppsGrid> {
                   //   CarCrashScreen(controller: carCrashController),
                   // );
                 },
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              HomeAppsCard(
-                imageUrl:
-                    "https://firebasestorage.googleapis.com/v0/b/flutterbricks-public.appspot.com/o/finance_app_2%2Fillustrations%2Fillustration1.png?alt=media&token=901c672d-0f35-49ee-8543-1e27a0891a1c",
-                text: 'Test',
-                subtitle: 'Test',
-                onPressed: () {},
               ),
             ],
           ),
@@ -111,7 +102,7 @@ class HomeAppsCard extends StatelessWidget {
           onTap: onPressed,
           child: Padding(
             padding:
-                const EdgeInsets.only(left: 8, right: 8, bottom: 8, top: 15),
+                const EdgeInsets.only(left: 8, right: 8, bottom: 8, top: 40),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
