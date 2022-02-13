@@ -1,10 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:personal_security_asistant/core/sfw.class.dart';
-import 'package:personal_security_asistant/views/screens/apps/carcrash/carcrash.controller.dart';
-import 'package:personal_security_asistant/views/screens/apps/carcrash/carcrash.view.dart';
 import 'package:personal_security_asistant/views/screens/apps/earthquake/earthquake.dart';
 import 'package:personal_security_asistant/views/screens/home/home.controller.dart';
 import 'package:personal_security_asistant/views/screens/home/widgets/appbar/home.appbar.view.dart';
@@ -52,7 +49,7 @@ class _HomeViewScreenState extends State<HomeViewScreen> {
         ),
         body: HomeApps(),
         bottomNavigationBar: HomeViewButtonNavBar(),
-        floatingActionButton: speedDial,
+        floatingActionButton: SpeedDialWidget(),
       ),
     );
   }

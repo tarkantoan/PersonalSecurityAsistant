@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ringtone_player/flutter_ringtone_player.dart';
 import 'package:personal_security_asistant/core/sfw.class.dart';
+import 'package:personal_security_asistant/utilities/general.dart';
 import 'carcrash.settings.controller.dart';
 
 class CarCrashSettings extends SFW {
@@ -12,8 +13,6 @@ class CarCrashSettings extends SFW {
 
   @override
   initState() {}
-  String text = "asd";
-  ss() async {}
 
   @override
   Widget build() {
@@ -24,14 +23,19 @@ class CarCrashSettings extends SFW {
               FlutterRingtonePlayer.stop();
             },
             child: Text("alarm")),
-        Text(text),
         Switch(
-            value: getController.realtimeTracker,
+            value: CarCrashSettingsController.getRealtimeTracker(),
             onChanged: (sss) async {
-              state.setState(() {
-                getController.realtimeTracker = !getController.realtimeTracker;
-                getController.setTracker();
-              });
+              General.prefs!
+                  .setBool("realtimeTracker",
+                      !CarCrashSettingsController.getRealtimeTracker())
+                  .then((value) => {
+                        state.setState(() {
+                          CarCrashSettingsController.realtimeTracker =
+                              !CarCrashSettingsController.getRealtimeTracker();
+                        }),
+                        CarCrashSettingsController.setTracker(),
+                      });
             }),
       ],
     );
