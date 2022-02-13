@@ -16,80 +16,82 @@ class CarCrashSettings extends SFW {
 
   @override
   Widget build() {
-    return Column(
-      mainAxisSize: MainAxisSize.max,
-      children: [
-        Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
-          child: Row(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Expanded(
-                child: Text(
-                  'Sürüş asistanınızın sizlere hangi bildirimi göndermesini istediğinizi seçin.',
-                  style: TextStyle(color: Colors.white60),
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Expanded(
+                  child: Text(
+                    'Sürüş asistanınızın sizlere hangi bildirimi göndermesini istediğinizi seçin.',
+                    style: TextStyle(color: Colors.white60),
+                  ),
                 ),
-              ),
-            ],
-          ),
-        ),
-        CarSwitchWidget(
-            text: 'Kötü Hava Koşulları',
-            subtitle:
-                'Bulunduğunuz ve ilerlediğiniz yönde hava koşulları sürüş için kötü ise size bildirim gönderir.',
-            value: CarCrashSettingsController.realtimeTracker,
-            onChanged: () {}),
-        CarSwitchWidget(
-            text: 'Kötü Yol Durumu',
-            subtitle:
-                'Bulunduğunuz ve ilerlediğiniz yönde yol durumu sürüş için kötü ise size bildirim gönderir.',
-            value: CarCrashSettingsController.realtimeTracker,
-            onChanged: () {}),
-        CarSwitchWidget(
-            text: 'Yol Çalışması',
-            subtitle:
-                'Bulunduğunuz ve ilerlediğiniz yönde yol çalışması mevcut ise size bildirim gönderir.',
-            value: CarCrashSettingsController.realtimeTracker,
-            onChanged: () {}),
-        CarSwitchWidget(
-            text: 'Hafif kazalar',
-            subtitle: 'Yaralanma olmayan/nadir kazalar',
-            value: CarCrashSettingsController.realtimeTracker,
-            onChanged: () {}),
-        CarSwitchWidget(
-            text: 'Yoğun Kazalar',
-            subtitle: 'Aynı bölgede yaşanan çoklu kazalar',
-            value: CarCrashSettingsController.realtimeTracker,
-            onChanged: () {}),
-        CarSwitchWidget(
-            text: 'Ölümlü Kazalar',
-            subtitle: 'Bölgede yaşanan ölümlü kazalar',
-            value: CarCrashSettingsController.realtimeTracker,
-            onChanged: () {}),
-        Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
-          child: ElevatedButton(
-            onPressed: () async {},
-            child: Text(
-              'Değişkenleri Kaydet',
+              ],
             ),
-            style: ElevatedButton.styleFrom(
-                onPrimary: Colors.white,
-                minimumSize: Size(190, 50),
-                textStyle: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w500,
-                ),
-                elevation: 3,
-                side: BorderSide(
-                  color: Colors.transparent,
-                  width: 1,
-                ),
-                shape: StadiumBorder()),
           ),
-        ),
-      ],
+          CarSwitchWidget(
+              text: 'Kötü Hava Koşulları',
+              subtitle:
+                  'Bulunduğunuz ve ilerlediğiniz yönde hava koşulları sürüş için kötü ise size bildirim gönderir.',
+              value: CarCrashSettingsController.realtimeTracker,
+              onChanged: () {}),
+          CarSwitchWidget(
+              text: 'Kötü Yol Durumu',
+              subtitle:
+                  'Bulunduğunuz ve ilerlediğiniz yönde yol durumu sürüş için kötü ise size bildirim gönderir.',
+              value: CarCrashSettingsController.realtimeTracker,
+              onChanged: () {}),
+          CarSwitchWidget(
+              text: 'Yol Çalışması',
+              subtitle:
+                  'Bulunduğunuz ve ilerlediğiniz yönde yol çalışması mevcut ise size bildirim gönderir.',
+              value: CarCrashSettingsController.realtimeTracker,
+              onChanged: () {}),
+          CarSwitchWidget(
+              text: 'Hafif kazalar',
+              subtitle: 'Yaralanma olmayan/nadir kazalar',
+              value: CarCrashSettingsController.realtimeTracker,
+              onChanged: () {}),
+          CarSwitchWidget(
+              text: 'Yoğun Kazalar',
+              subtitle: 'Aynı bölgede yaşanan çoklu kazalar',
+              value: CarCrashSettingsController.realtimeTracker,
+              onChanged: () {}),
+          CarSwitchWidget(
+              text: 'Ölümlü Kazalar',
+              subtitle: 'Bölgede yaşanan ölümlü kazalar',
+              value: CarCrashSettingsController.realtimeTracker,
+              onChanged: () {}),
+          Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 24),
+            child: ElevatedButton(
+              onPressed: () async {},
+              child: Text(
+                'Değişkenleri Kaydet',
+              ),
+              style: ElevatedButton.styleFrom(
+                  onPrimary: Colors.white,
+                  minimumSize: Size(190, 50),
+                  textStyle: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500,
+                  ),
+                  elevation: 3,
+                  side: BorderSide(
+                    color: Colors.transparent,
+                    width: 1,
+                  ),
+                  shape: StadiumBorder()),
+            ),
+          ),
+        ],
+      ),
     );
   }
 

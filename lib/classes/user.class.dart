@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:personal_security_asistant/model/user.model.dart';
 import 'package:personal_security_asistant/repository/user.repository.dart';
-import 'package:personal_security_asistant/utilities/general.dart';
 
 class cUser with ChangeNotifier {
   final _userRepository = UserRepository();

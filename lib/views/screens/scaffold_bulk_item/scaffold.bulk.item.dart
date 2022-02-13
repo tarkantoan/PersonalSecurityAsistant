@@ -52,7 +52,8 @@ class _SpeedDialWidgetState extends State<SpeedDialWidget> {
           backgroundColor: Colors.red,
           label: 'Acil Yardım',
           labelStyle: TextStyle(fontSize: 18.0),
-          onTap: () => print('FIRST CHILD'),
+          onTap: () => Navigator.of(context)
+              .push(MaterialPageRoute(builder: (builder) => CallEmergency())),
           onLongPress: () => print('FIRST CHILD LONG PRESS'),
         ),
         SpeedDialChild(
