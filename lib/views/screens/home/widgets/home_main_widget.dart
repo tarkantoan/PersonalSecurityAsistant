@@ -7,16 +7,18 @@ class HomeApps extends StatefulWidget {
   const HomeApps({Key? key}) : super(key: key);
 
   @override
-  _HomeAppsState createState() => _HomeAppsState();
+  HomeAppsState createState() => HomeAppsState();
 }
 
-class _HomeAppsState extends State<HomeApps> {
+class HomeAppsState extends State<HomeApps> {
   @override
   Widget build(BuildContext context) {
+    ScrollController scrollKey = ScrollController();
     return Container(
       width: double.infinity,
       height: double.infinity,
       child: SingleChildScrollView(
+        controller: scrollKey,
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
@@ -42,7 +44,9 @@ class _HomeAppsState extends State<HomeApps> {
               padding: EdgeInsets.only(left: 20, right: 20),
               child: Row(
                 children: [
-                  HomeMapsWidget(),
+                  HomeMapsWidget(
+                    parent: this,
+                  ),
                 ],
               ),
             ),
