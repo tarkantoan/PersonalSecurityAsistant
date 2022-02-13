@@ -102,7 +102,7 @@ class HomeAppsCard extends StatelessWidget {
           onTap: onPressed,
           child: Padding(
             padding:
-                const EdgeInsets.only(left: 8, right: 8, bottom: 8, top: 40),
+                const EdgeInsets.only(left: 8, right: 8, bottom: 8, top: 20),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
