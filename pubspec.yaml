@@ -47,6 +47,7 @@ dependencies:
   location: ^4.3.0
   flutter_ringtone_player: ^3.1.1
   flutter_speed_dial: ^5.0.0+1
+  timer_count_down: ^2.2.1
 
 dev_dependencies:
   flutter_test:

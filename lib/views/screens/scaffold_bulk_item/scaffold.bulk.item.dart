@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:personal_security_asistant/utilities/general.dart';
+import 'package:personal_security_asistant/views/screens/apps/callemergency/call.dart';
 import 'package:personal_security_asistant/views/screens/apps/carcrash/widgets/settings/carcrash.settings.controller.dart';
 
 class SpeedDialWidget extends StatefulWidget {
