@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ringtone_player/flutter_ringtone_player.dart';
 import 'package:personal_security_asistant/core/sfw.class.dart';
+import 'package:personal_security_asistant/utilities/general.dart';
 import 'carcrash.settings.controller.dart';
 
 class CarCrashSettings extends SFW {
@@ -36,34 +37,34 @@ class CarCrashSettings extends SFW {
             text: 'Kötü Hava Koşulları',
             subtitle:
                 'Bulunduğunuz ve ilerlediğiniz yönde hava koşulları sürüş için kötü ise size bildirim gönderir.',
-            value: getController.realtimeTracker,
+            value: CarCrashSettingsController.realtimeTracker,
             onChanged: () {}),
         CarSwitchWidget(
             text: 'Kötü Yol Durumu',
             subtitle:
                 'Bulunduğunuz ve ilerlediğiniz yönde yol durumu sürüş için kötü ise size bildirim gönderir.',
-            value: getController.realtimeTracker,
+            value: CarCrashSettingsController.realtimeTracker,
             onChanged: () {}),
         CarSwitchWidget(
             text: 'Yol Çalışması',
             subtitle:
                 'Bulunduğunuz ve ilerlediğiniz yönde yol çalışması mevcut ise size bildirim gönderir.',
-            value: getController.realtimeTracker,
+            value: CarCrashSettingsController.realtimeTracker,
             onChanged: () {}),
         CarSwitchWidget(
             text: 'Hafif kazalar',
             subtitle: 'Yaralanma olmayan/nadir kazalar',
-            value: getController.realtimeTracker,
+            value: CarCrashSettingsController.realtimeTracker,
             onChanged: () {}),
         CarSwitchWidget(
             text: 'Yoğun Kazalar',
             subtitle: 'Aynı bölgede yaşanan çoklu kazalar',
-            value: getController.realtimeTracker,
+            value: CarCrashSettingsController.realtimeTracker,
             onChanged: () {}),
         CarSwitchWidget(
             text: 'Ölümlü Kazalar',
             subtitle: 'Bölgede yaşanan ölümlü kazalar',
-            value: getController.realtimeTracker,
+            value: CarCrashSettingsController.realtimeTracker,
             onChanged: () {}),
         Padding(
           padding: EdgeInsetsDirectional.fromSTEB(0, 24, 0, 0),
@@ -95,24 +96,6 @@ class CarCrashSettings extends SFW {
   @override
   isBuilded() {}
 }
-
-//  Column(
-//   children: [
-//     ElevatedButton(
-//         onPressed: () {
-//           FlutterRingtonePlayer.stop();
-//         },
-//         child: Text("alarm")),
-//     Switch(
-//         value: getController.realtimeTracker,
-//         onChanged: (sss) async {
-//           state.setState(() {
-//             getController.realtimeTracker = !getController.realtimeTracker;
-//             getController.setTracker();
-//           });
-//         }),
-//   ],
-// );
 
 class CarSwitchWidget extends StatelessWidget {
   final String text;

@@ -32,7 +32,7 @@ class CarCrashScreen extends SFW {
         controller: SFWController(),
         module: getController,
       ),
-      floatingActionButton: speedDial,
+      floatingActionButton: SpeedDialWidget(),
     );
   }
 

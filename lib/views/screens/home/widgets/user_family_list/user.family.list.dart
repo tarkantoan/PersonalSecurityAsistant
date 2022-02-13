@@ -27,7 +27,16 @@ class _UserFamilyViewState extends State<UserFamilyView> {
               text: 'Alihan Şişman',
               imageUrl:
                   "https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg",
-              subtitle: 'Evde Uyuyor',
+              subtitle: 'Evde',
+              onPressed: () {}),
+          SizedBox(
+            width: 15,
+          ),
+          UserFamilyCard(
+              text: 'Tarkan Antoan Başar',
+              imageUrl:
+                  "https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg",
+              subtitle: 'Konum paylaşmıyor',
               onPressed: () {}),
           SizedBox(
             width: 15,
@@ -36,16 +45,7 @@ class _UserFamilyViewState extends State<UserFamilyView> {
               text: 'Alihan Şişman',
               imageUrl:
                   "https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg",
-              subtitle: 'Evde Uyuyor',
-              onPressed: () {}),
-          SizedBox(
-            width: 15,
-          ),
-          UserFamilyCard(
-              text: 'Alihan Şişman',
-              imageUrl:
-                  "https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg",
-              subtitle: 'Evde Uyuyor',
+              subtitle: 'Güzelyalı m...',
               onPressed: () {}),
         ],
       ),

@@ -20,11 +20,29 @@ class CarCrashSettingsController extends SFWController {
 
   CarCrashSettings get getView => view as CarCrashSettings;
 
-  bool realtimeTracker = false;
-  StreamSubscription<LocationData>? streamSub;
+  static bool realtimeTracker = false;
+  static StreamSubscription<LocationData>? streamSub;
   List<String> alermedLocs = [];
 
-  changeNotificationSettings(Location location,
+  static Future<bool> getDriveMode() async {
+    final driveMode = General.prefs!.getBool("driveMode");
+    if (driveMode ?? false) {
+      General.prefs!.setBool("driveMode", false);
+      return false;
+    }
+    return true;
+  }
+
+  static bool getRealtimeTracker() {
+    final driveMode = General.prefs!.getBool("realtimeTracker");
+    if (driveMode == null) {
+      General.prefs!.setBool("realtimeTracker", false);
+      return false;
+    }
+    return driveMode;
+  }
+
+  static changeNotificationSettings(Location location,
       {String? channelName,
       String? iconName,
       String? subtitle,
@@ -40,10 +58,8 @@ class CarCrashSettingsController extends SFWController {
         title: title ?? "Personal Security Asistant");
   }
 
-  setTracker() async {
-    General.prefs!.setBool("realtimeTracker", realtimeTracker);
-
-    if (realtimeTracker) {
+  static setTracker() async {
+    if (getRealtimeTracker()) {
       Location location = new Location();
 
       bool _serviceEnabled;
